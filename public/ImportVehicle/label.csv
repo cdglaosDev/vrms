@@ -1,0 +1,164 @@
+name,value,value_en,updated_by,user_id,status
+name,Name,Name,1,1,active
+email,Email,Email,1,1,active
+phone,Phone,Phone,1,1,active
+timezone,Timezone,TimeZone,1,1,active
+time_format,Time Format,Time Format,1,1,active
+date_format,Date Format,Date Format,1,1,active
+status,Status,Status,1,1,active
+create_customer,Create New Customer,Create New Customer,1,1,active
+customer_list,Customer Lists,Customer Lists,1,1,active
+admin_list,Admin Lists,Admin Lists,1,1,active
+create_admin,Create Admin,Create Admin,1,1,active
+create_consultant,Create Consultant,Create Consultant,1,1,active
+manage_category,Manage Category,Manage Category,1,1,active
+add_new_category,Add New Category,Add New Category,1,1,active
+category_name,Category Name,Category Name,1,1,active
+slug,Slug,Slug,1,1,active
+manage_article,Manage Article,Manage Article,1,1,active
+create_new_article,Create New Category,Create New Category,1,1,active
+category,Category,Category,1,1,active
+title,Title,Title,1,1,active
+ref_link,Reference Link,Reference Link,1,1,active
+content,Content,Content,1,1,active
+public_private,Public or Private,Public or Private,1,1,active
+manage_general_setting,Manage General Setting,Manage General Setting,1,1,active
+website_title,Website Title,Website Title,1,1,active
+base_color_code,BASE COLOR CODE,BASE COLOR CODE,1,1,active
+bg_color_code,BACKFROUND Color CODE,BACKFROUND Color CODE,1,1,active
+registration,Registration,Registration,1,1,active
+email_verify,EMAIL VERIFICATION,EMAIL VERIFICATION,1,1,active
+email_noti,EMAIL NOTIFICATION,EMAIL NOTIFICATION,1,1,active
+manage_footer,Manage Footer,Manage Footer,1,1,active
+footer_content,Footer Content,Footer Content,1,1,active
+manage_social,Manage Social,Manage Social,1,1,active
+add_social,Add Social,Add Social,1,1,active
+code,Code,Code,1,1,active
+link,Link,Link,1,1,active
+present_logo,Present Logo,Present Logo,1,1,active
+present_icon,Present Icon,Present Icon,1,1,active
+manage_aboutus,Manage About Us,Manage About Us,1,1,active
+aboutus,About Us,About Us,1,1,active
+manage_faq,Manage FAQ,Manage FAQ,1,1,active
+question,Question,Question,1,1,active
+answer,Answer,Answer,1,1,active
+manage_label,Manage Label,Manage Label,1,1,active
+value,Value,Value,1,1,active
+manage_timeslot,Manage Timeslot,Manage Timeslot,1,1,active
+slot_no,Slot No,Slot No,1,1,active
+slot_value,Slot Value,Slot Value,1,1,active
+manage_country,Manage Country,Manage Country,1,1,active
+country_code,Country Code,Country Code,1,1,active
+my_profile,My Profile,My Profile,1,1,active
+manage_emp,Manage Employee,Manage Employee,1,1,active
+create_emp,Create Employee,Create Employee,1,1,active
+manage_customer,Manage Customer,Manage Customer,1,1,active
+create_customer,Create Customer,Create Customer,1,1,active
+image,Image,Image,1,1,active
+manage_duration,Manage Duration,Manage Duration,1,1,active
+add_duration,Add Duration,Add Duration,1,1,active
+edit_duration,Edit Duration,Edit Duration,1,1,active
+duration,Duration,Duration,1,1,active
+manage_service,Manage Service,Manage Service,1,1,active
+add_service,Add New Service,Add New Service,1,1,active
+edit_service,Edit Service,Edit Service,1,1,active
+order_by,Order By,Order By,1,1,active
+manage_schedule_category,Manage Schedule Category,Manage Schedule Category,1,1,active
+add_schedule_category,Add Schedule Category,Add Schedule Category,1,1,active
+edit_schedule_category,Edit Schedule Category,Edit Schedule Category,1,1,active
+slot_value,Slot Value,Slot Value,1,1,active
+available_schedule,Availabel Schedule,Availabel Schedule,1,1,active
+from_date,From Date,From Date,1,1,active
+to_date,To Date,To Date,1,1,active
+manage_schedule,Manage Schedule,Manage Schedule,1,1,active
+make_available,Make Availabe,Make Availabe,1,1,active
+manage_inquiry,Manage Inquiry,Manage Inquiry,1,1,active
+message,Message,Message,1,1,active
+action,Action,Action,1,1,active
+manage_appoint,Manage Appointment,Manage Appointment,1,1,active
+add_new_appoint,Add New Appointment,Add New Appointment,1,1,active
+quick_appoint,Quick Appointment,Quick Appointment,1,1,active
+client,Client,Client,1,1,active
+date,Date,Date,1,1,active
+time,Time,Time,1,1,active
+request_by,Requested By,Requested By,1,1,active
+make_appoint,Make Appointment,Make Appointment,1,1,active
+add_country,Add Country,Add Country,1,1,active
+edit_country,Edit Country,Edit Country,1,1,active
+country_name,Country Name,Country Name,1,1,active
+update_label,Update Label,Update Label,1,1,active
+update_country,Update Country,Update Country,1,1,active
+edit_profile,Edit Profile,Edit Profile,1,1,active
+change_password,Change Password,Change Password,1,1,active
+services,Services,Services,1,1,active
+home,Home,Home,1,1,active
+appointment,Appointments,Appointments,1,1,active
+about,About,About,1,1,active
+contact,Contact,Contact,1,1,active
+contact_us,Contact Us,Contact Us,1,1,active
+our_address,Our Address,Our Address,1,1,active
+cancel,Cancel,Cancel,1,1,active
+update,Update,Update,1,1,active
+save,Save,Save,1,1,active
+edit,Edit,Edit,1,1,active
+logout,Logout,Logout,1,1,active
+request_cancel,Request Cancel,Request Cancel,1,1,active
+remark,Remark,Remark,1,1,active
+register,Register,Register,1,1,active
+login,Login,Login,1,1,active
+forgot_password,Forgot Password,Forgot Password,1,1,active
+latest_new,Latest New,Latest New,1,1,active
+our_service,Our Services,Our Services,1,1,active
+search,Search,Search,1,1,active
+owner,Owner,Owner,1,1,active
+reject_appoint,Reject Appointment,Reject Appointment,1,1,active
+remark,Remark,Remark,1,1,active
+reject,Reject,Reject Appointment,1,1,active
+consultant,Consultant,Consultant,1,1,active
+manage_user,Manage User,Manage User,1,1,active
+address,Address,Address,1,1,active
+dashboard,Dashboard,Dashboard,1,1,active
+google_map,Google Map,Google Map,1,1,active
+website_setting,Website Setting,Website Setting,1,1,active
+general_setting,General Setting,General Setting,1,1,active
+contact_setting,Contact Setting,Contact Setting,1,1,active
+interface_control,Interface Control,Interface Control,1,1,active
+logo_favicon,Logo and Favicon,Logo and Favicon,1,1,active
+setup,Setup,Setup,1,1,active
+profile,Profile,Profile,1,1,active
+my_article,My Articles,My Articles,1,1,active
+public_article,Public Articles,Public Articles,1,1,active
+old_password,Old Password,Old Password,1,1,active
+new_password,New Password,New Password,1,1,active
+view_detail,View Detail,View Detail,1,1,active
+customer,Customer,Customer,1,1,active
+by_phone,By Phone,By Phone,1,1,active
+by_name,By Name,By Name,1,1,active
+confirm,Confirm,Confirm,1,1,active
+view_permission,View Permission,View Permission,1,1,active
+url,URL,URL,1,1,active
+module,Module,Module,1,1,active
+read,Read,Read,1,1,active
+write,Write,Write,1,1,active
+delete,Delete,Delete,1,1,active
+permission_setup,Permission Setup,Permission Setup,1,1,active
+edit_article,Edit Articles,Edit Articles,1,1,active
+article_list,Article Lists,Article Lists,1,1,active
+edit_consultant,Edit Consultant,Edit Consultant,1,1,active
+consultant_list,Consultant List,Consultant List,1,1,active
+edit_customer,Edit Customer,Edit Customer,1,1,active
+new_customer,New Customer,New Customer,1,1,active
+customer_list,Customer Lists,Customer Lists,1,1,active
+add_new_faq,Add New Faq,Add New Faq,1,1,active
+edit_schedule,Edit Schedule,Edit Schedule,1,1,active
+create_new_service,Create New Service,Create New Service,1,1,active
+add_new_label,Add New Label,Add New Label,1,1,active
+add_timeslot,Add Timeslot,Add Timeslot,1,1,active
+edit_admin,Edit Admin,Edit Admin,1,1,active
+create_admin,Create Admin,Create Admin,1,1,active
+update_category,Update Category,Update Category,1,1,active
+update_faq,Update Faq,Update Faq,1,1,active
+update_service,Update Service,Update Service,1,1,active
+update_social,Update Social,Update Social,1,1,active
+add_slot,Add Slot,Add Slot,1,1,active
+update_slot,Update Slot,Update Slot,1,1,active

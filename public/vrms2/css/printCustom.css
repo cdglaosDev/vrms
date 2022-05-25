@@ -1,0 +1,72 @@
+@font-face {
+    font-family:'Saysettha OT';
+    src: url('/fonts/saysettha_ot.ttf') format('ttf');
+}
+h3, h4{
+ 
+  font-size: 25px;
+}
+.certificate label, .certificate span{
+  
+    font-size: 20px;
+ }
+.certificate input[type=checkbox] {
+  transform: scale(2);
+  margin-left: 20px;
+}
+.certificate{
+ font-family:'Saysettha OT';
+}
+.certificate .col-md-12 {
+         width: 100%;
+    }
+
+    .certificate .col-md-11 {
+         width: 91.66666666666666%;
+    }
+
+    .certificate .col-md-10 {
+         width: 83.33333333333334%;
+    }
+
+    .certificate .col-md-9 {
+          width: 75%;
+    }
+
+    .certificate .col-md-8 {
+          width: 66.66666666666666%;
+    }
+
+    .certificate .col-md-7 {
+          width: 58.333333333333336%;
+     }
+
+     .certificate .col-md-6 {
+          width: 50%;
+     }
+
+     .certificate .col-md-5 {
+          width: 41.66666666666667%;
+     }
+
+     .certificate .col-md-4 {
+          width: 33.33333333333333%;
+     }
+
+     .certificate .col-md-3 {
+          width: 25%;
+     }
+
+     .certificate .col-md-2 {
+            width: 16.666666666666664%;
+     }
+
+     .certificate .col-md-1 {
+            width: 8.333333333333332%;
+      } 
+      .certificate .text-center{
+       text-align: center;
+    }
+    .certificate  .mb-1{
+       margin-bottom: 0.25rem;
+    }

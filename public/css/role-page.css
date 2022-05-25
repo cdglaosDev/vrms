@@ -1,0 +1,26 @@
+.panel-group .panel-heading a:before {
+    content: "\F068"; 
+    font-family: 'FontAwesome';
+    
+  }
+  .panel-group .panel-heading a.collapsed:before {
+    content: "\F067 ";
+  }
+  .panel-default>.panel-heading{
+      background-color: #fff;
+  }
+  #accordion .panel a,#accordion .panel-body{
+    color: #323276;
+  }
+  .role-label{
+    padding-right:10px;
+    display:block;
+    margin-left:15px
+  }
+
+
+
+
+ 
+ 
+ 

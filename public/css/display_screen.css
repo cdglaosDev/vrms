@@ -1,0 +1,126 @@
+body{
+  background-color: #0C1D0E;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+
+.item1{
+  grid-column-start: 1;
+  grid-column-end: 2;
+  text-align: left;
+  position: fixed;
+}
+.item2 {
+  text-align: center;
+  font-size: 22px;
+  color :yellow;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  line-height: 80%;
+}
+.item3{
+  grid-column-start: 5;
+  grid-column-end: 6;
+  text-align: right;
+  line-height: 80%;
+}
+.item4 {
+  
+  color: white;
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  border-top-style: solid;
+  border-top-color: rgba(251, 80, 74, 0.979);
+  border-top-width: thin;
+}
+.item6 {
+  float:right;
+  color: white;
+  text-align: center;
+  grid-column-start: 4;
+  grid-column-end: 6;
+  border-top-style: solid;
+  border-top-color: rgba(251, 80, 74, 0.979);
+  border-top-width: thin;
+}
+.item5{
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+
+.circle {
+  border-radius: 50%;
+  width : 50px;
+  text-align: center;
+}
+.start-round {
+  border-radius: 50px 0px 0px 50px;
+  text-align: center;
+}
+.end-round {
+  border-radius: 0px 50px 50px 0px;
+  text-align: center;
+}
+
+h4.text{
+ 
+  border-bottom-style: solid;
+  border-bottom-color: rgb(31, 126, 62);
+  border-bottom-width: thin;
+  margin-top: 5px;
+  margin-bottom: 15px; 
+  font-size: 25px;
+  text-align: right;
+}
+
+h4.date{
+  border-bottom-style: solid;
+  border-bottom-color: rgb(31, 126, 62);
+  border-bottom-width: thin;
+  margin-top: 5px;
+  margin-bottom: 15px; 
+  font-size: 25px;
+  text-align: right;
+}
+
+thead{
+  border-spacing: 0; 
+  border-collapse: collapse; 
+  background: #0e170d;
+  overflow:hidden;
+  width:100%;
+  position:relative;
+}
+table{ 
+  border-spacing: 0;  
+  border-collapse: collapse; 
+  background:black;
+  border-radius:20px;
+  overflow:hidden;
+  width:100%;
+  position:relative;
+  color:white;
+  }
+  
+  th{ padding-left:8px;padding-right:8px;text-align:center;}
+  th.text-left{ padding-left:0px;padding-right:8px;text-align:left;}
+
+  td{ text-align:center;}
+  td.text-left{ text-align:left;}
+
+  thead tr{ 
+    height:60px;
+    background:white;
+    color: #000;
+    font-size:20px;
+  }
+  
+  tbody tr{ height:60px; border-bottom:1px solid #E3F1D5 ;font-size:20px;}
+  tbody tr:last-child {
+    border-bottom: none;
+  }
+
+  

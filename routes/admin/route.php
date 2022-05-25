@@ -1,0 +1,66 @@
+<?php
+Route::group(['prefix' => 'admin'], function () {
+    Route::resource('country','Admin\CountryController');
+    Route::resource('nation','Admin\NationalityController');
+    Route::resource('province','Admin\ProvinceController');
+    Route::resource('village','Admin\VillageController');
+    Route::resource('district','Admin\DistrictController');
+    Route::resource('service-counter','Admin\ServiceController');
+    Route::resource('transfer_vehicle','Admin\TransfervehicleController');
+    Route::resource('road-tax','Admin\AppRoadtaxController');
+    Route::resource('old-document','Admin\OlddocumentController');	
+    Route::resource('importdetail','Admin\ImportAppitemdetailController');	
+    Route::resource('old-doc-category','Admin\OlddocumentcatController');		
+    Route::resource('position','Admin\PositionController');	
+    Route::resource('occupation','Admin\OccupationController');	
+    Route::resource('vehicle-category','Admin\VehiclecatController');	
+    Route::resource('Price-item-group','Admin\Price_itemgroupController');	
+    Route::resource('price_itemgroup_detail','Admin\Price_itemgroup_detailController');	
+    Route::resource('engine-brand','Admin\EngineBrandController');	
+    Route::resource('appdetail-form','Admin\AppFormController');
+    Route::resource('vehicle-type-group','Admin\VehicletypeGroupController');
+	Route::resource('driving-school','Admin\DrivingSchoolController');
+    Route::resource('vehicle-sale','Admin\VehicleSaleCenterController');
+	Route::resource('department','Admin\DepartmentController');
+    Route::resource('working-status-group','Admin\WorkingStatusGroupController');
+    Route::resource('working-status','Admin\WorkingStatusController');
+    Route::resource('vehicle-type','Admin\VehicleTypeController');
+    Route::resource('vehicle-model','Admin\VehicleModelController');
+    Route::resource('vehicle-brand','Admin\VehicleBrandController');
+    Route::resource('vehicle-kind','Admin\VehicleKindController');
+    Route::resource('steering','Admin\SteeringController');
+    Route::resource('app-purpose','Admin\AppPurposeController');
+    Route::resource('engine-type','Admin\GasController');
+    Route::resource('division','Admin\DivisionController');
+    Route::resource('money-unit','Admin\MoneyUnitController');
+    Route::resource('application-type','Admin\ApplicationTypeController');
+    Route::resource('application-doc-type','Admin\ApplicationDocTypeController');
+    Route::resource('applicationstatus','Admin\ApplicationStatusController');
+});
+
+
+Route::resource('license-alphabet-control','Module4\LicenseAlphabetControl');
+//check duplicate record for module3
+Route::get('/get-country' ,'Admin\CountryController@checkRecord');
+Route::get('/get-province' ,'Admin\ProvinceController@checkRecord');
+Route::get('/get-district' ,'Admin\DistrictController@checkRecord');
+Route::get('/get-village' ,'Admin\VillageController@checkRecord');
+Route::get('/get-position' ,'Admin\PositionController@checkRecord');
+Route::get('/get-occupation' ,'Admin\OccupationController@checkRecord');
+Route::get('/get-service-counter' ,'Admin\ServiceController@checkRecord');
+Route::get('/get-nation' ,'Admin\ServiceController@checkRecord');
+Route::get('/get-vtype-group' ,'Admin\VehicletypeGroupController@checkRecord');
+Route::get('/get-vtype' ,'Admin\VehicleTypeController@checkRecord');
+Route::get('/get-model' ,'Admin\VehicleModelController@checkRecord');
+Route::get('/get-brand' ,'Admin\VehicleBrandController@checkRecord');
+Route::get('/get-vehicle-kind' ,'Admin\VehicleKindController@checkRecord');
+Route::get('/get-steering' ,'Admin\SteeringController@checkRecord');
+Route::get('/get-engine-type' ,'Admin\GasController@checkRecord');
+Route::get('/get-engine-brand' ,'Admin\EngineBrandController@checkRecord');
+Route::get('/get-appdoc' ,'Admin\ApplicationDocTypeController@checkRecord');
+Route::get('/get-app-purpose' ,'Admin\AppPurposeController@checkRecord');
+Route::get('/get-money' ,'Admin\MoneyUnitController@checkRecord');
+Route::get('/get-color' ,'ColorController@checkRecord');
+Route::get('/get-alphabet-control-status' ,'Module4\LicenseAlphabetControl@checkRecord');
+Route::get('/get-nation' ,'Admin\NationalityController@checkRecord');
+Route::get('/check-department' ,'Admin\DepartmentController@checkRecord');

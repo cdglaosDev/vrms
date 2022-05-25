@@ -1,0 +1,1099 @@
+/* Start version1 custom.css file */
+
+body{
+ 
+  line-height: normal;
+ text-align: left;
+ }
+
+.right {
+  margin-left: 530px;
+  margin-top: 0px;
+  width: 460px;
+  height: 710px;
+  border: 1px solid #000;
+  font-family:"Myanmar3";
+  font-size:12px;
+   /* background-image: url(/images/p1.png);   */
+}
+.print-cust {
+   margin-left: 25%;
+  margin-top: 0px;
+  padding: 10px;
+  width: 50%;
+  border: 1px solid #000;
+  font-family:"Myanmar3";
+  font-size:12px;
+}
+#no{ margin:165px 15px 0px 140px;font-size:1.25rem;color: #000;font-size: 18px;}
+#ty{width:30px; margin:173px 15px 0px 63px;font-size: 14px;}
+/* #ty1, #ty2, #ty3{width:26px; height:18px; margin:5px 6px 6px 19px;font-size: 18px;} */
+#ty1{width:26px; height:18px; margin:5px 6px 6px 19px;font-size: 18px;}
+#ty2, #ty3{width:26px; height:18px; margin:10px 6px 6px 19px;font-size: 18px;}
+#regno{ margin:53px 15px 0px 120px; width: 180px;font-size: 14px;}
+#ty2 img,#ty3 img{
+margin-top: -6px;
+margin-left: -6px;
+width: 16px;
+height: 16px;
+}
+#ty i.fa{
+font-size: 23px;
+}
+#regno1, #regno2{line-height: 24px; padding: 5px;color: #000;
+font-size: 18px;width: 214px;}
+#regno1 p{
+  color: #000 !important;
+  font-size: 18px;
+  margin-top: 5px;
+}
+#chk{margin:0px; padding:0px; width:19px; height:19px; border: none;margin-top:-3px;}
+
+.left {
+  margin-left: 0px;
+  margin-top: 0px;
+  width:460px;
+  height: 710px;
+  border: 1px solid #000;
+  font-family:"Myanmar3";
+  font-size:12px;
+  /* background-image: url(/images/p2.png); */
+}
+
+/* span{border:1px solid #F10;}*/
+.left span{
+color:#000;
+}
+
+.cl {
+  padding: 0px;
+  /* border: 1px solid green; */
+}
+
+#box1{ margin:130px 5px 0px 5px; height: 25px;}
+#cat-div{ width: 224px; }
+#brd-div{ width: 130px; }
+#mdl-div{ width: 94px; }
+#cat{ margin-left: 67px; font-size: 18px;}
+#brd{ margin-left: 20px; font-size: 18px;}
+#mdl{ margin-left: 22px; font-size: 18px;}
+#caten{font-size: 18px;}
+#box1-1{margin: 0px 10px 0px 125px; font-size: 18px; height: 28px;}
+#box1-1 #cat-1{font-size: 18px;}
+
+#box2{ margin:0px 5px 0px 5px; height: 20px;}
+#clr-div{ width: 215px; }
+#lb-div{ width: 85px; }
+#lft-div{ width: 74px; }
+#rgt-div{ width: 74px; }
+#clr{ margin-left: 35px; font-size: 18px;}
+#lft{ margin-left: 2px;font-size: 18px;}
+#rgt{ margin-left: 9px;font-size: 18px;}
+#box2-1{margin: 2px 10px 0px 19px;font-size: 18px; width: 200px;}
+#box2-1 #clr-1{padding-left: 40px; font-size:18px}
+
+#chk{margin:0px; padding:0px; width:18px; height:18px; border: none;font-size: 18px;}
+
+#box3{ margin:0px 5px 0px 5px;}
+#ebrd-div{ width: 210px; }
+#cy-div{ width: 124px; }
+#cc-div{ width: 114px; }
+#ebrd{ margin-left: 48px; font-size: 18px;}
+#cy{ margin-left: 55px; font-size: 18px;}
+#cc{ margin-left: 25px; font-size: 18px;}
+
+#eno{ line-height: 30px; margin:56px 15px 0px 100px; color:#000;font-size: 18px}
+#cno{ line-height: 30px; margin:30px 15px 0px 100px; color:#000;font-size: 18px}
+
+#box4{ margin: 33px 5px 0px 5px;}
+#wt-div{ width: 210px; }
+#lt-div{ width: 108px; }
+#ht-div{ width: 130px; }
+#wt{ margin-left: 155px; font-size: 18px;}
+#lt{ margin-left: 63px; font-size: 18px;}
+#ht{ margin-left: 55px; font-size: 18px;}
+
+#st{ padding-left: 40px; margin:30px 10px 0px 100px; color:#000;font-size: 18px;}
+
+#nw{ margin:25px 10px 0px 100px; color:#000;font-size: 18px;}
+
+#da1{ line-height: 27px; margin:26px 15px 0px 110px; color: #000;font-size: 18px}
+#da2{ line-height: 30px; margin:10px 15px 0px 113px; color:#000;font-size: 18px;}
+
+.right.page3 {
+  margin-left: 530px;
+  margin-top:0px;
+  width:460px;
+  height: 710px;
+  border: 1px solid #000;
+  font-family:"Myanmar3";
+  font-size:12px;
+  /* background-image: url(/images/p3.png); */
+}
+
+span{border:0px solid #F10;}
+
+#n1{ line-height: 25px; margin:39px 15px 0px 148px; color:#000; font-size: 18px;}
+#n2{ line-height: 25px; margin:4px 15px 0px 207px; color:#000; font-size: 18px;}
+
+#p3box1{ margin:33px 5px 0px 5px; color:#000;}
+#vle-div{ width: 245px; }
+#unt-div{ width: 90px; }
+#ste-div{ width: 113px; }
+#vle{ margin-left: 55px; color:#000; font-size: 18px;}
+#unt{ margin-left: 43px; color:#000; font-size: 18px;}
+#ste{ margin-left: 43px; color:#000; font-size: 18px;}
+
+#p3box2{ margin:20px 5px 0px 5px; color:#000; height: 24px;}
+#dst-div{ width: 245px; }
+#prv-div{ width: 203px; }
+#dst{ margin-left: 48px; color:#000; font-size: 18px;}
+#prv{ margin-left: 56px; color:#000; font-size: 18px;}
+#pro_en{ margin-left: 110px;}
+
+#p3box2-1{ margin: 0px 5px 0px 5px; color: #000;}
+#dst-1-div{ width: 245px; }
+#prv-1-div{ width: 203px; }
+#dst-1{ margin-left: 60px; color: #000; font-size: 18px;}
+#prv-1{ width: 70px;margin: 0px 10px 0px 72px;color: #000;font-size: 18px;}
+
+#p3box3{ margin:0px 5px 0px 5px; color:#000;}
+#tel-div{ width: 245px; }
+#fx-div{ width: 203px; }
+#tel{ margin-left: 70px; color:#000; font-size: 18px;}
+#fx{ margin-left: 75px; color:#000; font-size: 18px;}
+
+#vld{ margin:38px 15px 0px 230px; color:#000; font-size: 18px;}
+
+#p3box4{ margin:54px 5px 0px 5px;color:#000; height: 23px;}
+#don-div{ width: 275px; }
+#dat-div{ width: 173px; }
+#don{ margin-left: 125px; color:#000; font-size: 18px;}
+#dat{ margin-left: 45px; color:#000; font-size: 18px;}
+
+#don-en{ margin-left: 170px; color:#000; font-size: 18px;}
+
+#print{
+  background-repeat:no-repeat;
+  background-position: bottom;
+}
+#print h3,#print h5,#print p{
+  color: blue !important;
+  font-weight: bold;
+}
+.technical .col-sm-4,.technical .col-sm-6,.technical .col-sm-3,.technical .col-sm-12{
+  padding: 0px;
+  color:blue
+}
+.technical span{
+  text-decoration-line: underline;
+    text-decoration-style: dashed;
+}
+
+.select2-container--default .select2-selection--single {
+  height: 27px !important;
+  padding: 1px 8px;
+  font-size: 14px;
+ 
+ 
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  top: 85% !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  line-height: 26px !important;
+}
+.select2-container--default .select2-selection--single {
+  border: 1px solid #707070 !important;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+
+
+#ty i.fa{
+  color: #000;
+  font-size: 20px;
+}
+#lft i.fa,#rgt i.fa{
+  font-size: 17px;
+  padding-top: 7px;
+  padding-left: 2px;
+}
+
+ #detail .label-size div label {font-size: 16px!important;}
+ form .form-control{
+  height: 27px !important;
+  padding: 1px 5px;
+}
+
+h1.page-header {
+  margin-bottom: 0px;
+    background-color: #07279d;
+    text-align: center;
+    padding: 16px 0px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: normal;
+}
+.disable {
+  pointer-events: none;
+  cursor: default;
+}
+.attach_doc td{
+ padding-bottom: 0px !important;
+}
+.nav-pills .nav-link:not(.active) {
+   background-color: #fff;
+   color: black;
+}
+
+/* active*/
+.nav-pills .nav-link {
+   background-color: rgba(0, 255, 0, 0.5);
+   color: white;
+}
+.panel .tab-content{
+ padding: 0px;
+}
+.dataTable .btn {
+    padding: 0.5rem 0.5rem !important;
+    vertical-align: top;
+  }
+  .form-control, select.form-control{
+    padding: 3px 10px;
+  }
+  .form-group{
+    margin-bottom: 0px;
+  }
+  .content-wrapper{
+    background-color: #ccdcf1;
+  }
+  .card{
+    border-radius: 0;
+  }
+  div#datetime{
+    padding: 0px;
+  }
+  span.input-group-addon.input-group-append.border-left{
+    height: 33px !important;
+  }
+  .form-control,select.form-control, .asColorPicker-input, .dataTables_wrapper select, .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row select, .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number], .select2-container--default .select2-selection--single, .select2-container--default .select2-selection--single .select2-search__field{
+    color: #000 !important;
+    border: 1px solid #707070;
+  }
+  .modal-header{
+    padding: 10px 26px !important;
+  }
+  .modal .modal-dialog .modal-content .modal-body{
+    padding: 20px 26px !important;
+  }
+  .sidebar-icon-only .sidebar .nav .nav-item.hover-open .collapse, .sidebar-icon-only .sidebar .nav .nav-item.hover-open .collapsing, .sidebar-icon-only .sidebar .nav .nav-item.hover-open .nav-link .menu-title{
+    width: 240px !important;
+    font-size: 1rem;
+  }
+  
+.ImportTable .btn.disabled{
+  color: #ebebeb !important;
+}
+.datepicker.datepicker-dropdown .datepicker-days table.table-condensed thead tr th, .datepicker.datepicker-inline .datepicker-days table.table-condensed thead tr th{
+ padding: 0px !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+  height: 16px !important;
+}
+select.form-control.multiselect{
+  height: 140px !important;
+}
+textarea.form-control{
+  height:70px !important;
+}
+
+a.form-control.no-print{
+  color: #fff !important;
+  border: none;
+}
+label.all{
+  font-weight: bold;
+}
+
+.card-body ul.pagination{
+  float: right;
+}
+#detail label, #detail span{
+  font-size: 1rem;
+}
+
+#register .error{
+  color: red;
+}
+.sidebar .nav.sub-menu .nav-item .nav-link.active{
+  color: #fff !important;
+  background-color:#474747 !important;
+  font-weight: bold;
+  font-size: 1rem;
+  
+}
+
+/* css for menu color */
+.sidebar .nav.sub-menu, #sidebar .nav-item.active a.nav-link{
+  background: #000;
+}
+.sidebar .nav.sub-menu> li> a.nav-link{
+  color: #fff !important;
+  font-weight: normal;
+ 
+}
+
+.sidebar .nav .nav-item .nav-link .menu-title{
+  font-size: 1rem;
+  
+}
+#sidebar .nav-item.active > a.nav-link >span, #sidebar .nav-item.active > a.nav-link >i , .sidebar .nav:not(.sub-menu) > .nav-item:hover > .nav-link {
+  color: #fff;
+  background-color: #000;
+}
+.sidebar .nav.sub-menu .nav-item .nav-link{
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+}
+.nav-item.hover-open >a.nav-link.collapsed>span.menu-title, .sidebar .nav:not(.sub-menu) > .nav-item:hover > .nav-link{
+  background-color: #000;
+  font-size: 1rem;
+}
+.sidebar-icon-only .sidebar .nav .nav-item.hover-open .collapse, .sidebar-icon-only .sidebar .nav .nav-item.hover-open .collapsing{
+  background-color: #000;
+  font-size: 1rem;
+}
+.sidebar .nav:not(.sub-menu) > .nav-item:hover > .nav-link{
+  background: #000;
+  font-size: 1rem;
+}
+
+.sidebar .nav .nav-item:hover .nav-link i.menu-icon{
+  color: #fff;
+}
+.sidebar-icon-only .sidebar .nav .nav-item.hover-open .nav-link:hover .menu-title, .sidebar .nav:not(.sub-menu) > .nav-item:hover > .nav-link>i{
+  color: #fff;
+  font-size: 1rem;
+
+}
+.sidebar-icon-only .sidebar .nav .nav-item.hover-open .nav-link:hover .menu-title{
+  background-color: #000;
+  color: #fff;
+}
+.sidebar-icon-only .sidebar .nav .nav-item.hover-open .nav-link .menu-title{
+  background-color: #000;
+}
+
+/* css for print */
+span.dot-line{
+  text-decoration: underline dotted #666666;
+ 
+}
+#detail span.veh-value{
+  font-weight: 700;
+}
+.table td, .jsgrid .jsgrid-table td, .card-body .nav-tabs, form label{
+  font-size: 1rem;
+}
+.form-group label{
+  vertical-align: bottom;
+}
+form label{
+  margin-bottom: 0px;
+}
+#printList input{
+  font-size: 16px;
+ height: 14px;
+}
+#print-paper input{
+  font-size:16px;
+}
+#div_control_btn, #lic_control_btn{
+  /*
+  background-color:#07279d;
+  */
+  background-color:#ccc;
+  padding: 0px 5px ;
+  cursor:pointer;
+   margin-left: 0px;
+   border-radius: 1px;
+   font-size: 12px;
+   padding-bottom: 6px;
+   vertical-align: top;
+   
+}
+#proError, #divError, #licError{
+  color: red;
+  font-size:10px;
+  text-align: justify;
+  word-spacing: -3px;
+}
+#price-list input{
+  font-size: 16px;
+}
+#updateVeh .disable-btn, .vehicle-form .disable-btn{
+  color: currentColor;
+  cursor: not-allowed;
+  opacity: 0.5;
+  text-decoration: none;
+  pointer-events: none;
+  vertical-align: top;
+}
+.license_control_page a{
+  padding: 14px 10px;
+}
+.Vehkind1{
+  border:1px solid #0774C2;
+  color:#0774C2 !important;
+  padding: 0px 5px;
+}
+.Vehkind2{
+   border: 1px solid #262626;
+  color:#262626 !important;
+  background-color: #ffff00;
+   padding: 0px 5px;
+}
+.Vehkind3{
+   border:1px solid #262626;
+  color:#262626 !important;
+   padding: 0px 5px;
+  
+}
+.Vehkind4{
+   border:1px solid #0774c2;
+  color:#0774c2 !important;
+  background-color: #ffff00;
+   padding: 0px 5px;
+}
+.Vehkind5{
+  
+  color:#ffffff !important;
+  background-color: #0774c2;
+   padding: 0px 5px;
+}
+#vehInfo #wrapper-license{
+  border: 1px solid #707070;
+  float: left;
+  width: 145px;
+  height: 27px;
+}
+input.noVehKind{
+  border-color: #fff !important;
+}
+.bg-orange {
+  background-color: orange;
+}
+
+.bg-green {
+  background-color: lightgreen;
+}
+
+.bg-yellow {
+  background-color: yellow;
+}
+
+.linktosub {
+  cursor: pointer;
+}
+/* end version1 custom.css file */
+ 
+.f13 {
+    font-size: 13px;
+  }
+  .f32{
+    font-size: 32px;
+  }
+  .f20{
+    font-size: 20px !important;
+  }
+  #main-menu{
+    padding-left: 177px;
+    background: #ee0;
+    color: #000;
+    height: 33px;
+  }
+  #main-menu a{
+    display: inline-block;
+    padding: 3px 6px;
+    border-radius: 1px;
+    color: #000;
+  }
+  #banner {
+    width: 98%;
+      height: 250px;
+      background: #ddd url(resources/banner.jpg)  center no-repeat;
+      border-bottom: #bbb solid 1px;
+      margin-top: -1px;
+      box-shadow: 0px 0px 12px rgb(0 0 0 / 20%);
+  }
+  #inner-menu{
+    border-top: #ddd solid 1px;
+    border-bottom: #ddd solid 1px;
+    padding-left: 30px;
+    background: #ee0;
+    color: #000;
+    min-height: 40px;
+    
+  }
+  #inner-menu a{
+      display: inline-block;
+      padding: 3px 5px 0px 5px;
+      border-radius: 1px;
+      color: #000;
+  }
+  #inner-menu > *{
+    display: inline-block;
+  }
+  #inner-body{
+    margin: 0px;
+  }
+  a.button{
+    margin-bottom: 3px;
+     display: inline-block;
+    text-decoration: none;
+  }
+  .button{
+    cursor: pointer;
+    color: #333 !important;
+    background-color:#fff;
+    border-radius: 5px;
+    text-shadow: none;
+    padding: 3px 6px;
+    border: #bbb solid 1px;
+    background: #FFF;
+     box-shadow: 0px 0px 1px rgb(0 0 0 / 20%);
+     margin-right: 3px;
+     margin-top: 3px;
+  }
+  input.login-submit.button{
+    padding-bottom: 5px;
+  }
+  h3 .button{
+    font-size: 13px !important;
+  }
+  h3.vehicle{
+    margin:0px;
+    padding: 10px;
+  }
+  .f12{
+    font-size: 12px;
+  }
+  textarea, input {
+      border-radius: 2px;
+      border: #ddd solid 1px;
+      background: #f8f8f8;
+      font-family: lao_font;
+      color: #333;
+      height: 27px;
+     
+  }
+  .w180{
+    width: 180px;
+  }
+  .w90{
+    width: 90px;
+  }
+  .w100{
+    width: 100px;
+  }
+  .w20{
+    width: 20px;
+  }
+  .w70{
+    width: 70px;
+  }
+  .w80{
+    width: 80px;
+  }
+  .nvt-form-paginator{
+      margin-top: 10px;
+      padding-left: 10px;
+      text-align: center;
+  }
+  #loginForm b{
+    color: #000 !important;
+    font-style: normal;
+    font-weight: normal;
+  }
+  .vehicles-list{width:100% !important;}
+  .vehicles-list thead th{font-weight:bold}
+  .vehicles-list thead{border-bottom:#ddd solid 1px}
+  .vehicles-list td{padding:2px 4px}
+  .vehicles-list td:nth-child(1){min-width:80px}
+  .vehicles-list td:nth-child(2){min-width:170px;max-width:170px}
+  .vehicles-list td:nth-child(3){min-width:110px}
+  .vehicles-list td:nth-child(4){min-width:100px}
+  .vehicles-list td:nth-child(5){min-width:100px}
+  .vehicles-list td:nth-child(6){min-width:100px}
+  .vehicles-list td:nth-child(7){min-width:110px}
+  .vehicles-list td:nth-child(8){min-width:80px}
+  .vehicles-list td:nth-child(9){min-width:160px}
+  .vehicles-list td:nth-child(10){min-width:90px;max-width:90px}
+  .vehicles-list td:nth-child(11){min-width:80px}
+  .vehicles-list td:nth-child(12){font-size:7px}
+  .vehicles-list td img{width:30px}
+  
+  .vehicles-list thead{
+    border-bottom:#ddd solid 1px;
+  }
+  /* license color by vehicle kind code */
+  .license_no{
+    padding-left: 3px;
+    padding-right: 3px;
+    font-weight: bold;
+    min-width: 70px;
+    display: inline-block;
+    text-align: center;
+  }
+  
+.license_no[purpose_no="1"] {
+  background: #fe0;
+  border: #000 solid 2px !important;
+  color: #000 !important;
+}
+.license_no[purpose_no="2"] {
+  background: #fff;
+  border: #0011FF solid 2px !important;
+  color: #0011FF !important;
+}
+.license_no[purpose_no="3"] {
+  background: #fff;
+  border: #000 solid 2px !important;
+  color: #000 !important;
+}
+.license_no[purpose_no="4"] {
+  background: #fe0;
+  border: #1763DA solid 2px !important;
+  color: #1763DA !important;
+}
+.license_no[purpose_no="5"], .license_no[purpose_no="51"]{
+  background: #fff;
+  border: #1763DA solid 2px !important;
+  color: #1763DA !important;
+}
+.license_no[purpose_no="6"] {
+  background: #01f;
+  border: #fff solid 1px !important;
+  color: #fff !important;
+  outline: #01f solid 1px;
+}
+.province{
+  font-weight: bold;
+}
+
+.province[province_code="01"] {color: #F58A1D;}	
+.province[province_code="02"] {color: #350038;}	
+.province[province_code="03"] {color: #9883BC;}	
+.province[province_code="04"] {color: #8F7080;}	
+.province[province_code="05"] {color: #B2B3B7;}	
+.province[province_code="06"] {color: #21409A;}	
+.province[province_code="07"] {color: #231F20;}	
+.province[province_code="08"] {color: #3E1300;}	
+.province[province_code="09"] {color: #009A90;}	
+.province[province_code="10"] {color: #74141F;}	
+.province[province_code="11"] {color: #AD0C2F;}	
+.province[province_code="12"] {color: #E20A62;}	
+.province[province_code="13"] {color: #F7B80B;}	
+.province[province_code="14"] {color: #6CB338;}	
+.province[province_code="15"] {color: #9BAD79;}	
+.province[province_code="16"] {color: #A3957B;}	
+.province[province_code="17"] {color: #7C7F50;}	
+.province[province_code="18"] {color: #003777;} 
+.province[province_code=""] {color: #000;} 
+
+/*color by province */
+[province="5"]{
+  color: #F7B80B;
+}
+[province="14"] {
+  color: #3E1300;
+}
+[province="9"] {
+  color: #009A90;
+}
+[province="3"] {
+  color: #AD0C2F;
+}
+.vehicles-list tr:nth-child(even) {background: #f8f8f8}
+
+.vehicles-list tr:nth-child(odd) {background: #FFF}
+[init]{
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: #ddf;
+  box-shadow: 1px1px 2px rgba(0,0,0,0.3);
+  border-radius: 3px;
+  position: relative;
+}
+.w150{
+  width: 150px !important;
+}
+.nav-tabs .nav-link{
+  font-size: 13px;
+}
+.table-bordered td, .table-bordered th{
+  padding: .5rem .75rem;
+}
+  
+ .modal-header h3{
+   border: none;
+   padding: 2px 16px;
+ } 
+ .modal-header{
+   padding: 0.5rem 1rem;
+ }
+.modal-body input[type="number"]{
+  text-align: left;
+}
+ #myTable tr>td{
+  vertical-align: middle;
+}
+.currency:after{
+  content: none;
+}
+#app-document .input-group{
+  padding:0px;
+  background: #fff;
+  border-top: none;
+}
+
+.tab-head a.active{
+  background-color: #fff !important;
+    color: inherit;
+    border-color: #ddd;
+    border-bottom: #fff solid 1px;
+    box-shadow: 1px -1px 2px rgb(0 0 0 / 10%);
+}
+#myTable tbody th, #myTable tbody td, .table tbody th,.table tbody td,#importVeh tbody th, #importVeh tbody td,{
+  padding: 2px 10px;
+}
+#myTable .edit_btn, #myTable .delete_btn{
+  padding: 0px;
+}
+.role-label input[type=checkbox]{
+  height: 12px;
+}
+  
+/* pagination start */
+.pagin-prev , .pagin-next{
+    display: inline-block;   
+    width: 60px;
+    padding: 3px 4px;
+    text-align: center;
+    cursor: default;
+    border-radius: 3px;
+    height: 22px;
+    font-size: 13px;
+    font-weight: normal;
+    vertical-align: middle;    
+    line-height: 16px;
+    border: #bbb solid 1px;
+  }
+
+  /*
+  .pagin-prev{
+    display:none;
+  }
+  */
+
+#vehEdit input:disabled, #vehicleInfo1 input:disabled {
+  background: gray;
+}
+.customer-dashboard .card{
+  height: 100px;
+  border-radius: 8px;
+   padding: 15px;
+}
+
+
+#mySidenav #myTable_next, #mySidenav #myTable_previous, #mySidenav a.paginate_button.current{
+  font-size: 14px;
+} 
+
+/* main menu active css */
+#inner-menu a.active{
+  color: blue;
+  font-weight: 700;
+}
+
+.price-item-table{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.price-item-table .nav-link{
+  padding: 0.5rem;
+}
+/* select2 custom css */
+span.select2-selection__arrow{
+  display: none;
+}
+
+/*================================= Vehicle Inspection Column =================================*/
+.vehicles-inspect{width:100% !important;}
+.vehicles-inspect thead th{font-weight:bold}
+.vehicles-inspect thead{border-bottom:#ddd solid 1px;}
+.vehicles-inspect td{padding:2px 4px}
+.vehicles-inspect td:nth-child(1){width:60px}
+.vehicles-inspect td:nth-child(2){min-width:120px;max-width:130px}
+.vehicles-inspect td:nth-child(3){min-width:120px;max-width:140px}
+.vehicles-inspect td:nth-child(4){min-width:100px;max-width:120px}
+.vehicles-inspect td:nth-child(5){min-width:120px;max-width:140px}
+.vehicles-inspect td:nth-child(6){min-width:100px;max-width:120px}
+.vehicles-inspect td:nth-child(7){min-width:100px;max-width:120px}
+.vehicles-inspect td:nth-child(8){min-width:100px;max-width:120px}
+.vehicles-inspect td:nth-child(9){min-width:80px;max-width:100px}
+.vehicles-inspect td:nth-child(10){min-width:100px;max-width:130px}
+.vehicles-inspect td:nth-child(11){max-width:70px}
+.vehicles-inspect td:nth-child(12){max-width:70px}
+
+.vehicles-inspect tr:nth-child(even) {background: #f8f8f8}
+.vehicles-inspect tr:nth-child(odd) {background: #FFF}
+/*==================== Vehicle List Column Start 99% ====================*/
+.v_lic_no{
+  /* width: 120px !important; */
+  width: 6% !important;
+}
+.v_name {
+  /* width: 130px !important; */
+  width: 14% !important;
+}
+.v_eng_cha {
+  /* width: 130px !important; */
+  width: 11% !important;
+}
+.v_village_district, .v_pro_name {
+  /* width: 120px !important; */
+  width: 9% !important;
+}
+.v_t_name {
+  /* width: 100px !important; */
+  width: 9% !important;
+}
+.v-brand {
+  /* width: 120px !important; */
+  width: 9% !important;
+}
+.v-model {
+  /* width: 120px !important; */
+  width: 9% !important;
+}
+.v-color {
+  /* width: 100px !important; */
+  width: 7% !important;
+}
+.v_updated_at{
+  width: 7% !important;
+}
+/*==================== Vehicle List Column End ====================*/
+.btn-secondary{color:#ffffff !important;}
+
+.w3-light-blue{
+  background-color:#87CEEB!important;
+}
+#ui-datepicker-div{
+  display:none !important;
+}
+/* price list css */
+#pList tbody td{
+  padding: 2px 6px;
+}
+#pList .item, #pList .remove, #pList .item_code{
+  width: 100%;
+}
+#pList .price_item_name, #pList .item_name{
+  width: 100%;
+}
+
+#pList .qty{
+  width: 100%;
+}
+#pList .price, #pList .sub_total{
+  width: 100%;
+}
+.scrollTable {
+  overflow:none;
+  height:165px;
+}
+#pList input[type="number"]{
+  text-align: left;
+}
+#saveRecord {
+  background: url(/images/save.png);
+  background-repeat: no-repeat;
+  border: 1px solid #ddd;
+  padding: 2px;
+  background-position-y: 4px;
+  background-position-x: 4px;
+}
+#price-list-print{
+  background: url(/images/print.png);
+  background-repeat: no-repeat;
+  border: 1px solid #ddd;
+  padding: 2px;
+  background-position-y: 4px;
+  background-position-x: 4px;
+}
+.new-bill{
+  background: url(/images/plus.png);
+  background-repeat: no-repeat;
+  border: 1px solid #ddd;
+  padding: 2px;
+  background-position-y: 4px;
+  background-position-x: 4px;
+}
+.price-item-table .tab-pane{
+  overflow: scroll;
+  height: 745px;
+}
+.price-item-table ::-webkit-scrollbar {
+  width: 0px; 
+  }
+#pricelist .disabled {
+  pointer-events: none;
+}
+#saveRecord, .new-bill, .printBtn, #next_btn, #previous_btn{
+  cursor: pointer;
+}
+#pricelist .active-counter{
+  background-color: #28a745;
+  border-color:#28a745;
+  color:#fff;
+}
+#price_list_page #myTable_paginate{
+  display:none;
+}
+
+#newModal .modal-content.mod5, #editModal .modal-content.mod5, #showModal .modal-content.mod5{
+  width:1180px;
+  height: 654px;
+}
+#pricelist .AppNo, #pricelist .item_name,  #pricelist .updated_by, .sameSize{
+  font-family: Saysettha OT !important;
+}
+#importVeh  th, #customerVehImport th{
+  padding: 2px 4px !important;
+  vertical-align: middle;
+}
+
+#moduleMang .submenu{
+  margin-left: 30px;
+}
+.userRole .ms-options ul{
+  list-style: none;
+  padding-left: 0px;
+}
+
+.userRole .ms-options-wrap > .ms-options > ul>li{
+  height: 25px;
+}
+.userRole .ms-options-wrap > .ms-options > ul input[type="checkbox"]{
+  top: 5px;
+}
+.userRole .ms-options-wrap > button{
+  color: #000 !important;
+}
+.userRole .ms-options{
+  max-height: 115px !important;
+  display: block !important;
+  min-height: 115px !important;
+}
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    #pList .price_item_name, #pList .item_name{
+      width: 100%;
+    }
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+}
+
+#customerVehImport #myTable_filter{
+  display: none;
+}
+#customerVehImport #myTable tfoot{
+  position: absolute;
+  top: 40px;
+}
+#customerVehImport #myTable{
+  padding-top: 40px;
+}
+
+#customerVehImport #myTable tfoot tr th:nth-of-type(1) input{
+  width: 90px;
+}
+
+#customerVehImport #myTable tfoot tr th:nth-of-type(2) input{
+  width: 95px;
+}
+#customerVehImport #myTable tfoot tr th:nth-of-type(3) input{
+  width: 103px;
+}
+#customerVehImport #myTable tfoot tr th:nth-of-type(4) input{
+  width: 90px;
+}
+#customerVehImport #myTable tfoot tr th:nth-of-type(5) input{
+  width: 102px;
+}
+#customerVehImport #myTable tfoot tr th:nth-of-type(6) input{
+  width: 102px;
+}
+#customerVehImport #myTable tfoot tr th:nth-of-type(7) input{
+  width: 86px;
+}
+#customerVehImport #myTable tfoot tr th:nth-of-type(8) input{
+  width: 85px;
+}
+#customerVehImport #myTable tfoot tr th:nth-of-type(9) input{
+  width: 163px;
+}
+#customerVehImport #myTable tfoot tr th:nth-of-type(10) input{
+  width: 77px;
+}
+#customerVehImport #myTable tfoot tr th:nth-of-type(11) input{
+  width: 125px;
+  border:none;
+  background-color: #fff;
+}
+#importVeh .approve{
+  cursor: pointer;
+}
+#deleteBox{
+  background-color: #ddd;
+  display: none;
+  border: 1px solid rgba(0,0,0,.2);
+  position: fixed;
+  top: 40px;
+  width: 500px;
+  left: 45%;
+  margin-left: -100px;
+  padding: 16px 8px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 0.3rem;
+}
+#deleteBox button {
+  display: inline-block;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding: 5px;
+  text-align: center;
+  width: 100px;
+}
+#deleteBox .no{
+margin-left: 215px;
+}
+/* #importVeh_length, #importVeh_filter{
+  display: none;
+} */

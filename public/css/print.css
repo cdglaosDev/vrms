@@ -1,0 +1,14 @@
+@media print
+{
+    * {
+    -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
+    color-adjust: exact !important;     
+  } 
+  
+body * { visibility: hidden;}
+#printcontent *, #printPaper2 * { visibility: visible; }
+#printcontent, #printPaper2 { position: absolute; top: 40px; left: 30px; }
+}
+@media screen {
+#printcontent, #printPaper2 { display: none; }
+}

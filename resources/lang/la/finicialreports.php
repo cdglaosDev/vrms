@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'manage_daily_reports' => "ຈັດການລາຍງານປະຈໍາວັນ",
+    'price_per_item' => "ລາຄາຕໍ່ລາຍການ",
+    'total_number' => "ຕົວເລກທັງໝົດ",
+    'tital_amount' => "ຈໍານວນລວມທັງໝົດ",
+    'list_date' => "ວັນທີ",
+    'staff_name' => "ຊື່ພະນັກງານ",
+    'customer_name' => "ຊື່ລູກຄ້າ",
+    'item_detail' => "ລາຍລະອຽດລາຍການ",
+    'manage_summary_reports' => "ຈັດການສະຫຼຸບລາຍງານ",
+    'select_options' => "ເລືອກຕົວເລືອກ",
+    'from' => "ຈາກວັນທີ",
+    'to' => "ຫາວັນທີ",
+    'enter_from_date' => "ໃສ່ຈາກວັນທີ",
+    'enter_to_date' => "ໃສ່ຫາວັນທີ",
+    'search' => "ຄົ້ນຫາ",
+    'daily' => "ປະຈຳວັນ",
+    'weekly' => "ປະຈໍາອາທິດ",
+    'monthly' => "ປະຈໍາເດືອນ",
+    'select_province' => "ເລືອກແຂວງ",
+    'total_qty' => "ລວມຈໍານວນ",
+    'fine_per_item' => "ສ່ວນແບ່ງຄ່າປັບໄໝ",
+    'total' => "ລວມທັງໝົດ",
+    'total_fine_fee' => "ລວມສ່ວນແບ່ງຄ່າປັບໄໝ",
+    'sub_total_amt' =>"ລວມຈໍານວນທັງໝົດ",
+];
