@@ -25,9 +25,12 @@ use Exception;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\ValidationException;
+use Illuminate\Support\Facades\Cache;
+use App\Http\Controllers\Cached\DatacachedController as Datacached;
 
 class VehicleController extends Controller
 {
+
     function __construct()
     {
         $this->middleware('permission:Vehicle-List-View');
@@ -45,165 +48,109 @@ class VehicleController extends Controller
     public function allVehicleList()
     {
         $data = \App\Helpers\getData::vehInfo();
-        $vehicles = Vehicle::skip(0)->take(20)->get();
-        //dd($vehicles);
+        $vehicles = Vehicle::paginate(20);
+        // dd(compact('vehicles','data'));
         return view('vrms2.vehicle.all-vehicles', compact('vehicles', 'data'));
     }
 
+
+
     public function loadVehicles()
     {
-        //============================= Call to Create Query ==============================
-        $sql_query = $this->create_query();
+        $cacheing = new Datacached();
+        $total_vehicles = $cacheing->Allvehicles();
+        $vehicles = "";
+        $vehicle = "";
 
-        $sql_query = trim($sql_query, " WHERE "); // . " ORDER BY updated_at DESC"; //Temporary Comment for Testing Server
-        // dd($sql_query);
-        $vehicle_result = DB::select($sql_query);
+        $values = $cacheing->getCached();
 
-        //We will show just only 20 records in each page. For next page, we will get data and show when click next/prev button.
-        $vehicles = array_slice($vehicle_result, 0, 20);
+        if ($values != null) {
+            $vehicle = array_slice($values, 0, 20);
 
-        $total_vehicles = count($vehicle_result);
-        $num = ceil($total_vehicles / 20);
-        $total_pages = number_format($num, 0, ".", "");
+            $pagination = count($values);
+            $num = ceil($pagination / 20);
+            $total_pages = number_format($num, 0, ".", "");
+            // dd($vehicle);
+
+            $vehicles = $vehicle;
+        } else {
+            list('offset' => $offset, 'limit' => $limit) = $cacheing->getPagination(0, 100);
+
+            //============================= Call to Create Query ==============================
+            $sql_query = $this->create_query();
+
+            $sql_query = trim($sql_query, " WHERE "); // . " ORDER BY updated_at DESC"; //Temporary Comment for Testing Server
+
+            $limit = $sql_query . " LIMIT " . $limit . " offset " . $offset; // laos
+            // dd($limit);
+
+            $vehicle_result = DB::select($limit);  // dev on laos
+
+            // $vehicle_result = DB::select($sql_query);   
+
+            //We will show just only 20 records in each page. For next page, we will get data and show when click next/prev button.
+            $vehicle = array_slice($vehicle_result, 0, 20);
+
+            $pagination = count($vehicle_result);
+            $num = ceil($pagination / 20);
+            $total_pages = number_format($num, 0, ".", "");
+
+            $response = [];
+
+            for ($i = 0; $i < count($vehicle_result); $i++) {
+                $response[] =  $vehicle_result[$i];
+            }
+
+            $cacheing->Caching($response);
+
+            $vehicles = $vehicle;
+        }
+
+        // echo json_encode($vehicles, JSON_PRETTY_PRINT) . "\n";
 
         return view('vrms2.vehicle.LoadVehicles', compact('vehicles', 'total_pages', 'total_vehicles'));
     }
 
     public function searchVehicles(Request $request)
     {
+        $cacheing = new Datacached();
+        //attributes
         $cpage = $request->current_page;
         $spage = $request->search_page;
+        // dd($cpage . " " . $spage);
 
-        $license_no = $request->license_no;
-        $general = $request->general;
-        $province_name = $request->province_name;
-        $village_name = $request->village_name;
-        $owner_name = $request->owner_name;
-        $vehicle_kind_code = $request->vehicle_kind_code;
-        $issue_date = $request->issue_date;
-        $sortBy = empty($request->sortBy) ? 'updated_at' : $request->sortBy;
+        $license = $request->license_no;
 
-        $vehicle_type_name = $request->vehicle_type_name;
-        $brand_name = $request->brand_name;
-        $model_name = $request->model_name;
-        $engine_no = $request->engine_no;
-        $chassis_no = $request->chassis_no;
-        $color_name = $request->color_name;
-        $cc = $request->cc;
-        $year_manufactured = $request->year_manufactured;
-        $import_permit_no = $request->import_permit_no;
-        $industrial_doc_no = $request->industrial_doc_no;
-        $technical_doc_no = $request->technical_doc_no;
-        $commerce_permit_no = $request->commerce_permit_no;
+        // dd($request->license_no);
+        /// end attributes
 
-        $pagination = "";
-        if ($cpage == 1) {
-            $pagination = 0;
-        } else {
-            $pagination = ($cpage * 20) - 20;
-        }
+        $vehicles = "";
+        $vehicle = "";
+        $total_vehicles = $cacheing->Allvehicles();
 
-        //============================= Call to Create Query ==============================
-        $sql_query = $this->create_query();
-        $where_query = "";
-        $general_query = "";
+        $values = $cacheing->getCached();
 
-        //============================= Create WHERE Clause ==============================
-        if (!empty($license_no)) {
-            $where_query = $where_query . "v.licence_no like '%" . "$license_no" . "%' AND ";
-        }
-        if (!empty($province_name)) {
-            $where_query = $where_query . "v.province_name like '%" . "$province_name" . "%' AND ";
-        }
-        if (!empty($village_name)) {
-            $where_query = $where_query . "v.village_name like '%" . "$village_name" . "%' AND ";
-        }
-        if (!empty($owner_name)) {
-            $where_query = $where_query . "v.owner_name like '%" . "$owner_name" . "%' AND ";
-        }
-        if (!empty($vehicle_kind_code)) {
-            $where_query = $where_query . "v.vehicle_kind_code like '%" . "$vehicle_kind_code" . "%' AND ";
-        }
-        if (!empty($issue_date)) {
-            $where_query = $where_query . "v.issue_date like '%" . "$issue_date" . "%' AND ";
-        }
-        if (!empty($vehicle_type_name)) {
-            $where_query = $where_query . "v.vehicle_type_name like '%" . "$vehicle_type_name" . "%' AND ";
-        }
-        if (!empty($brand_name)) {
-            $where_query = $where_query . "v.brand_name like '%" . "$brand_name" . "%' AND ";
-        }
-        if (!empty($model_name)) {
-            $where_query = $where_query . "v.model_name like '%" . "$model_name" . "%' AND ";
-        }
-        if (!empty($engine_no)) {
-            $where_query = $where_query . "v.engine_no like '%" . "$engine_no" . "%' AND ";
-        }
-        if (!empty($chassis_no)) {
-            $where_query = $where_query . "v.chassis_no like '%" . "$chassis_no" . "%' AND ";
-        }
-        if (!empty($color_name)) {
-            $where_query = $where_query . "v.color_name like '%" . "$color_name" . "%' AND ";
-        }
-        if (!empty($cc)) {
-            $where_query = $where_query . "v.cc like '%" . "$cc" . "%' AND ";
-        }
-        if (!empty($year_manufactured)) {
-            $where_query = $where_query . "v.year_manufacture like '%" . "$year_manufactured" . "%' AND ";
-        }
-        if (!empty($import_permit_no)) {
-            $where_query = $where_query . "v.import_permit_no like '%" . "$import_permit_no" . "%' AND ";
-        }
-        if (!empty($industrial_doc_no)) {
-            $where_query = $where_query . "v.industrial_doc_no like '%" . "$industrial_doc_no" . "%' AND ";
-        }
-        if (!empty($technical_doc_no)) {
-            $where_query = $where_query . "v.technical_doc_no like '%" . "$technical_doc_no" . "%' AND ";
-        }
-        if (!empty($commerce_permit_no)) {
-            $where_query = $where_query . "v.comerce_permit_no like '%" . "$commerce_permit_no" . "%' AND ";
-        } 
+        list('offset' => $offset, 'limit' => $limit) = $cacheing->getPagination($cpage, 20);
 
-        if (!empty($general)) {
-            $general_query = "v.division_no like '%" . "$general" . "%' "
-            . " OR v.province_no like '%" . "$general" . "%' "
-            . " OR v.licence_no like '%" . "$general" . "%' "
-            . " OR v.owner_name like '%" . "$general" . "%' "
-            . " OR v.engine_no like '%" . "$general" . "%' "
-            . " OR v.chassis_no like '%" . "$general" . "%' "
-            . " OR v.pre_licence_no like '%" . "$general" . "%' ";
-        }
-
-        if($where_query != ""){
-            if($general_query != ""){
-                $sql_query = $sql_query . $where_query . $general_query;
-            }else{
-                $sql_query = $sql_query . $where_query;
+        if ($values != null) {
+            if ($license != null) {
+                $total_pages = $cpage;
+                $search_item = array("license_no" => "ມລ 1116");
+                $geta = $cacheing->searching($values, $search_item);
+                // dd($geta);
+                // $vehicle = $geta;
+            } else {
+                $vehicle = array_slice($values, $offset - 20, $limit);
+                $pagination = count($values);
+                $num = ceil($pagination / 20);
+                $total_pages = number_format($num, 0, ".", "");
+                // dd($values);
             }
 
-            $sql_query = trim($sql_query, " AND ");
-        }else if($general_query != ""){
-            $sql_query = $sql_query . $general_query;
-        }else{
-            $sql_query = trim($sql_query, " WHERE ");
+            $vehicles = $vehicle;
         }
 
-        //Temporary Comment for Testing Server 
-        //$sql_query = $sql_query . " ORDER BY " . $sortBy . " DESC"; 
-        
-        // dd($sql_query);
-         //dd($sql_query);
-        
-        $vehicle_result = DB::select($sql_query);
-
-        //We will show just only 20 records in each page. For next page, we will get data and show when click next/prev button.
-        $vehicles = array_slice($vehicle_result, $pagination, 20);
-
-        $total_vehicles = count($vehicle_result);
-        $num = ceil($total_vehicles / 20);
-        $total_pages = number_format($num, 0, ".", "");
-
-        return view('vrms2.vehicle.SearchVehicles', compact('vehicles', 'total_vehicles', 'total_pages'));
+        // return view('vrms2.vehicle.SearchVehicles', compact('vehicles', 'total_vehicles', 'total_pages'));
     }
 
     public function create_query()
@@ -463,12 +410,12 @@ class VehicleController extends Controller
         }
 
         AppForm::whereVehicleIdAndAppFormStatusId($id, 5)->update(['app_form_status_id' => 6]);
-        
+
         return view('Module4.registration.print.book', compact('vehicle'));
     }
 
     public function printTransfer($id)
-    {      
+    {
         $data = AppForm::whereVehicleId($id)->orderBy('id', 'desc')->first();
 
         return view('Module4.registration.print.print-transfer', compact('data'));
@@ -476,11 +423,11 @@ class VehicleController extends Controller
 
     public function pinkPaperModal(Request $request)
     {
-        $operation = $request->operation ;// update, new_form, pink1, pink2
+        $operation = $request->operation; // update, new_form, pink1, pink2
         $vehicle_id = $request->vehicle_id;
         $owner_name = $request->owner_name;
         $app_form = AppForm::whereVehicleId($vehicle_id)->orderBy('id', 'desc')->first();
-        
+
         return view('vrms2.vehicle.PinkpaperNewForm', compact('app_form', 'vehicle_id', 'owner_name', 'operation'));
     }
 
@@ -557,6 +504,7 @@ class VehicleController extends Controller
 
     public function editVehicle($id)
     {
+
         $vehicle = Vehicle::find($id);
 
         if ($vehicle == null) {
@@ -571,10 +519,11 @@ class VehicleController extends Controller
             $app_doc = null;
         }
 
+
         //$data = AppForm::whereVehicleId($id)->orderBy('id', 'desc')->first();
 
 
-        //dd($vehicles);
+        dd($vehicle);
         //dd($veh_info);
         //dd($vehicle_doc);
         //dd($data);
@@ -634,17 +583,17 @@ class VehicleController extends Controller
             //In UI, show "0000" if licence_no is blank or null. 
             $request['licence_no'] = (request('licence_no') == "0000") ? null : request('licence_no');
 
-            $vehicle = Vehicle::find($id);//To update
-            $data =  Vehicle::find($id);//To get old record
-            
+            $vehicle = Vehicle::find($id); //To update
+            $data =  Vehicle::find($id); //To get old record
+
             //======================== Check License No. Duplicate when License Generate =====================
-            if ((!$data->licence_no && $request['licence_no'])////First Time Generate
-            || (($data->vehicle_kind_code != request('vehicle_kind_code') || $data->province_code != request('province_code')) 
-            && $request['licence_no']) //Generate license_no again after changing "vehicle_kind_code" and "province_code"
+            if ((!$data->licence_no && $request['licence_no']) ////First Time Generate
+                || (($data->vehicle_kind_code != request('vehicle_kind_code') || $data->province_code != request('province_code'))
+                    && $request['licence_no']) //Generate license_no again after changing "vehicle_kind_code" and "province_code"
             ) {
-                $lic_vehicle = Vehicle::where('id', '!=', $id)->where('licence_no', '=',$request['licence_no'])
-                ->where('vehicle_kind_code', '=',$request['vehicle_kind_code'])
-                ->where('province_code', '=',$request['province_code'])->get();
+                $lic_vehicle = Vehicle::where('id', '!=', $id)->where('licence_no', '=', $request['licence_no'])
+                    ->where('vehicle_kind_code', '=', $request['vehicle_kind_code'])
+                    ->where('province_code', '=', $request['province_code'])->get();
 
                 if (count($lic_vehicle) > 0) {
                     return response()->json(['status' => 'lic_duplicate', 'message' => trans('module4.msg_lic_already_taken')]);
@@ -704,11 +653,11 @@ class VehicleController extends Controller
             }
 
             //========================== Update LicenseNoPresent when License Generate ========================
-            if ((!$data->licence_no && $request['licence_no'])////First Time Generate
-            || (($data->vehicle_kind_code != request('vehicle_kind_code') || $data->province_code != request('province_code')) 
-            && $request['licence_no']) //Generate license_no again after changing "vehicle_kind_code" and "province_code"
+            if ((!$data->licence_no && $request['licence_no']) ////First Time Generate
+                || (($data->vehicle_kind_code != request('vehicle_kind_code') || $data->province_code != request('province_code'))
+                    && $request['licence_no']) //Generate license_no again after changing "vehicle_kind_code" and "province_code"
             ) {
-                try {//Update LicenseNoPresent
+                try { //Update LicenseNoPresent
                     $data->updateLicenseNoPresent(request('province_code'), $request['licence_no'], request('vehicle_kind_code'), $vehicle->vtype->vehicle_type_group_id, $data->vehicle_kind_code, $data->id);
                 } catch (\Exception $e) {
                     return response()->json(['status' => 'error', 'message' => "Error in updating License No. present.\n" . $e->getMessage(), 'errors' => $e]);
@@ -717,14 +666,16 @@ class VehicleController extends Controller
 
             //======================== Save Vehicle History if app_form_status_id = "All Task Complete" ======================
             if (request('app_form_status_id') == 7) {
-                if ($data->owner_name != request('owner_name') || $data->vehicle_kind_code != request('vehicle_kind_code') ||
-                $data->licence_no != request('licence_no') || $data->province_no != request('province_no') || $data->engine_no != request('engine_no')) {
+                if (
+                    $data->owner_name != request('owner_name') || $data->vehicle_kind_code != request('vehicle_kind_code') ||
+                    $data->licence_no != request('licence_no') || $data->province_no != request('province_no') || $data->engine_no != request('engine_no')
+                ) {
                     try {
                         $vehicle->saveVehicleHistory($vehicle, request('app_id'));
                     } catch (\Exception $e) {
                         return response()->json(['status' => 'error', 'message' => "Error in saving Vehicle History.\n" . $e, 'errors' => $e]);
                     }
-                }else if ($data->issue_date != request('issue_date') || $data->expire_date != request('expire_date')) {
+                } else if ($data->issue_date != request('issue_date') || $data->expire_date != request('expire_date')) {
                     try {
                         $vehicle->updateVehicleHistory($vehicle);
                     } catch (\Exception $e) {
@@ -733,11 +684,11 @@ class VehicleController extends Controller
                 }
             }
             //========================== Update LicenseNoPresent and Save LicenseNoHistory when License Generate ========================
-            if ((!$data->licence_no && $request['licence_no'])////First Time Generate
-            || (($data->vehicle_kind_code != request('vehicle_kind_code') || $data->province_code != request('province_code')) 
-            && $request['licence_no']) //Generate license_no again after changing "vehicle_kind_code" and "province_code"
+            if ((!$data->licence_no && $request['licence_no']) ////First Time Generate
+                || (($data->vehicle_kind_code != request('vehicle_kind_code') || $data->province_code != request('province_code'))
+                    && $request['licence_no']) //Generate license_no again after changing "vehicle_kind_code" and "province_code"
             ) {
-                try {//Save LicenseNoHistory
+                try { //Save LicenseNoHistory
                     $vehicle->saveLicenseNoHistory($vehicle);
                 } catch (\Exception $e) {
                     return response()->json(['status' => 'error', 'message' => "Error in saving License No. History.\n" . $e->getMessage(), 'errors' => $e]);
@@ -858,7 +809,7 @@ class VehicleController extends Controller
         //Division Message
         $division_status = $div_no_arr[0];
         $division_no = $div_no_arr[1];
-        $division_msg = "";//
+        $division_msg = ""; //
 
         if ($division_status == "normal") {
             $division_msg = "";
@@ -869,9 +820,9 @@ class VehicleController extends Controller
         } else if ($division_status == "must_between") {
             $division_msg = trans('module4.div_ctrl_must_between');
         } else if ($division_status == "alert_at_equal") {
-            $division_msg = str_replace('province_name', $province_Name,(str_replace('division_no', $division_no, trans('module4.div_ctrl_equal_alert'))));   
+            $division_msg = str_replace('province_name', $province_Name, (str_replace('division_no', $division_no, trans('module4.div_ctrl_equal_alert'))));
         } else if ($division_status == "alert_at_over") {
-            $division_msg = str_replace('province_name', $province_Name,(str_replace('division_no', $division_no, trans('module4.div_ctrl_over_alert'))));
+            $division_msg = str_replace('province_name', $province_Name, (str_replace('division_no', $division_no, trans('module4.div_ctrl_over_alert'))));
         } else {
             $division_msg = 'You need to check division_no control.';
         }

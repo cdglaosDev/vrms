@@ -139,6 +139,7 @@ $province_code_list = \App\Model\Province::whereStatus(1)->get();
   <div class="tab-content clearfix">
     <!-- **************************************** Vehicle List Tab **************************************** -->
     <div class="tab-pane active" id="vehicle_list_tab">
+      <!-- searching vehicle data -->
       <div class="row" id="search" style="background:#cdf;padding-left: 5px;padding-top: 5px ;margin:0px;width: 100%;">
         {{ trans('module4.general')}}:<input type="text" class="w130 mr-2" id="s_general" style="font-family: Saysettha OT !important;" title="Search for division_no, province_no, licence_no, owner_name, engine_no and chassis_no">
         {{ trans('module4.province')}}:<input type="text" class="w90 mr-2" id="s_province_name">
@@ -158,7 +159,6 @@ $province_code_list = \App\Model\Province::whereStatus(1)->get();
             <option value="6">issue_date</option>
           </select>
         </div>
-
         <a href="#" id="advanced-show" class="button" onclick="$(&quot;#advanced-search&quot;).slideDown();$(this).hide();" style="display: inline-block; margin-top:0px; padding-top: 1px;padding-bottom: 1px;">{{ trans('module4.advanced_search')}}</a>
 
         <div id="advanced-search" style="width: 100%; background: rgb(204, 221, 255); border-radius: 10px; box-shadow: rgba(0, 0, 0, 0.3) 4px 4px 10px; padding: 3px; display: none;">
@@ -190,6 +190,7 @@ $province_code_list = \App\Model\Province::whereStatus(1)->get();
 
         </div>
       </div>
+       <!-- End searching vehicle data -->
 
       <div style="color:red;">{{ trans('module4.not_allow_to_publish')}}</div>
 
@@ -332,6 +333,7 @@ $province_code_list = \App\Model\Province::whereStatus(1)->get();
 
 <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 <script src="{{asset('vrms2/js/jquery_print.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script type="text/javascript">
   var dist_url = "{{url('/getdistrict/')}}";
   var get_vmodal = "{{url('/getVmodel/')}}";
@@ -397,11 +399,10 @@ $province_code_list = \App\Model\Province::whereStatus(1)->get();
   });
   //==============================================================================================================
   function loadPage() {
-    $(".pagin-prev").hide();
+    // $(".pagin-prev").hide();
     $.ajax({
         url: "/load-vehicles",
         type: 'GET',
-        cache: false,
         dataType: 'html',
         beforeSend: function() { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
           $('#loader').removeClass('hidden')
@@ -509,7 +510,7 @@ $province_code_list = \App\Model\Province::whereStatus(1)->get();
           $('#loader').removeClass('hidden')
         },
         success: function(data) {
-          //console.log(data);
+          // console.log(data);
           var total_pages = 0;
           $('#search-result').html(data);
           total_vehicles = $('#t_vehicles').html();
@@ -610,6 +611,7 @@ $province_code_list = \App\Model\Province::whereStatus(1)->get();
           $('#not_in_loader').removeClass('hidden');
         },
         success: function(data) {
+          console.log(data)
           var total_pages = 0;
           $('#v_not_in_system_Result').html(data);
           total_records = $('#t_records').html();
@@ -713,6 +715,7 @@ $province_code_list = \App\Model\Province::whereStatus(1)->get();
         dataType: 'html'
       })
       .done(function(data) {
+        console.log($('.v' + id).html(data))
         $('.v' + id).html(data);
 
       })
@@ -1917,7 +1920,7 @@ $province_code_list = \App\Model\Province::whereStatus(1)->get();
         province_code: province_code
       },
       success: function(data) {
-        console.log(data);
+        // console.log(data);
         if (data.status == "OK") {
           $("#licence_no").val(data.licence_no);
           $("#lic_control_btn").addClass('disable-btn');
